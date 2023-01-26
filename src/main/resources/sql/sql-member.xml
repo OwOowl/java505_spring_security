@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bitc.securitytest.mapper.ClubMemberMapper">
+    <select id="findByEmail" resultType="com.bitc.securitytest.dto.ClubMemberDto">
+        select * from club_member
+        where email = #{email}
+        and from_social = #{social}
+    </select>
+</mapper>
